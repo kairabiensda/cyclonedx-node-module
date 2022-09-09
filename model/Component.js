@@ -98,7 +98,16 @@ class Component extends CycloneDXObject {
 
     if (pkg) {
       // use the setters wherever type checks are needed, as the input data is untrusted and potentially malformed.
-      this.name = pkg.name
+      if (process.env.BOM_NO_GROUP_FIELD) {
+        this.name = pkg.name
+      } else {
+        const pkgIdentifier = parsePackageJsonName(pkg.name)
+        this.name = pkgIdentifier.fullName
+        this.group = pkgIdentifier.scope
+        if (this.#group) {
+          this.#group = `@${this.#group}`
+        }
+      }
 
       this.type = this.determinePackageType(pkg)
 
