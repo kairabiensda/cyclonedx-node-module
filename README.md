@@ -9,6 +9,25 @@
 
 ----
 
+# ‼️ ARCHIVED ‼️
+
+This workaround has quickly become obsolete - the solution was instead incorporated in a [tool down the line](https://github.com/anchore/syft/pull/1029) instead.
+
+See [this issue in Syft](https://github.com/anchore/syft/issues/1202) for more information and hopefully further discussion.
+
+
+----
+----
+----
+----
+----
+
+
+
+
+
+
+
 # CycloneDX Node.js Module
 
 The CycloneDX module for Node.js creates a valid CycloneDX Software Bill-of-Materials (SBOM) containing an aggregate of all project dependencies. CycloneDX is a lightweight SBOM specification that is easily created, human and machine readable, and simple to parse.
